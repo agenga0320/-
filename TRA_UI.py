@@ -286,7 +286,7 @@ class Window(QWidget):
         if str(self.cb1.currentText()) == str(self.cb2.currentText()) :
             QtWidgets.QMessageBox.warning(self, "警告", "起終點不能相同", QtWidgets.QMessageBox.Cancel)
         else:
-            self.car = odata_api.timesearch2(self.c.selectedDate().toString("yyyy-MM-dd"),str(self.cb3.currentText()),str(self.cb1.currentText()),str(self.cb2.currentText()))
+            self.car = odata_api.timesearch(self.c.selectedDate().toString("yyyy-MM-dd"),str(self.cb3.currentText()),str(self.cb1.currentText()),str(self.cb2.currentText()))
             self.hide()
             window2.show()
             #print(str(self.car))
